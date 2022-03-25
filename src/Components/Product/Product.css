@@ -36,9 +36,17 @@
   border-radius: 0 0 5px 5px;
   background-color: sandybrown;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart p {
+  margin-right: 7px;
 }
 .cart:hover {
   background-color: chocolate;
+  font-weight: 600;
+  font-size: xx-large;
 }
 .cart p:hover {
   font-weight: 600;
