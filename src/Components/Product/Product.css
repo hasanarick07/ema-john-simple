@@ -1,0 +1,44 @@
+.product {
+  width: 300px;
+  height: 510px;
+  border: 2px solid lightslategrey;
+  border-radius: 7px;
+  position: relative;
+  margin-bottom: 7px;
+}
+.product img {
+  width: 286px;
+  height: 286px;
+  border-radius: 7px;
+  margin: 7px;
+  transition: transform 0.5s linear;
+}
+.product img:hover {
+  transform: scale(1.5, 1.5);
+}
+.product-details {
+  margin: 0px;
+  margin-left: 7px;
+}
+.product p {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  margin: 3px;
+  font-size: 21px;
+}
+
+.cart {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+  background-color: sandybrown;
+  text-align: center;
+}
+.cart:hover {
+  background-color: chocolate;
+}
+.cart p:hover {
+  font-weight: 900;
+}
