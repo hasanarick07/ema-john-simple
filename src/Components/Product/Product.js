@@ -17,7 +17,7 @@ const Product = props => {
       </div>
       <div onClick={() => add(product)} className="cart">
         <p>
-          Add to Cart<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
+          Add to Cart <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
         </p>
       </div>
     </div>
