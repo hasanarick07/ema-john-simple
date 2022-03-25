@@ -15,7 +15,7 @@
   transition: transform 0.5s linear;
 }
 .product img:hover {
-  transform: scale(1.5, 1.5);
+  transform: scale(2, 1.5) translate(0px, 40px);
 }
 .product-details {
   margin: 0px;
@@ -41,5 +41,6 @@
   background-color: chocolate;
 }
 .cart p:hover {
-  font-weight: 900;
+  font-weight: 600;
+  font-size: xx-large;
 }
