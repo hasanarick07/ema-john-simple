@@ -15,9 +15,10 @@ const Product = props => {
         <p>Seller: {seller}</p>
         <p>{ratings}Star</p>
       </div>
-      <div className="cart">
-        <p onClick={() => add(product)}>Add to Cart</p>
-        <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
+      <div onClick={() => add(product)} className="cart">
+        <p>
+          Add to Cart<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
+        </p>
       </div>
     </div>
   );
