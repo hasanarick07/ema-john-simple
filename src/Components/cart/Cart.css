@@ -1,4 +1,8 @@
 .order {
   position: sticky;
   top: 0px;
+  margin-left: 7px;
+}
+.order h3 {
+  text-align: center;
 }
