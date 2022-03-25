@@ -10,5 +10,7 @@
   margin-left: 7px;
 }
 .order-container {
-  position: sticky;
+  background-color: rgba(248, 174, 121, 0.795);
+  padding: 7px;
+  margin-left: 7px;
 }

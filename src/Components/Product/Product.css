@@ -5,7 +5,7 @@
   border-radius: 7px;
   position: relative;
   margin-bottom: 7px;
-  margin-top: 5px;
+  margin-top: 14px;
 }
 .product img {
   width: 286px;
@@ -15,7 +15,7 @@
   transition: transform 0.5s linear;
 }
 .product img:hover {
-  transform: scale(2, 1.5) translate(0px, 40px);
+  transform: scale(1.25, 1.25) translate(0px, 20px);
 }
 .product-details {
   margin: 0px;
@@ -34,7 +34,7 @@
   bottom: 0px;
   width: 100%;
   border-radius: 0 0 5px 5px;
-  background-color: sandybrown;
+  background-color: rgb(243, 151, 71);
   text-align: center;
   display: flex;
   align-items: center;
@@ -44,11 +44,5 @@
   margin-right: 7px;
 }
 .cart:hover {
-  background-color: chocolate;
-  font-weight: 600;
-  font-size: xx-large;
-}
-.cart p:hover {
-  font-weight: 600;
-  font-size: xx-large;
+  background-color: rgb(243, 117, 28);
 }
