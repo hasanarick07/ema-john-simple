@@ -1,33 +1,31 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import useProducts from "../../hooks/useProducts";
 import { addToDb, getStoredCart } from "../../utilities/fakedb";
 import Cart from "../cart/Cart";
+import Order from "../Order/Order";
 import Product from "../Product/Product";
 import "./Shop.css";
 
 const Shop = () => {
-  const [products, setProducts] = useState([]);
-  const [cart, setcart] = useState([]);
-  useEffect(() => {
-    fetch("products.json")
-      .then(res => res.json())
-      .then(data => setProducts(data));
-  }, []);
+  const [products, setProducts] = useProducts();
+  const [cart, setCart] = useState([]);
+
   useEffect(() => {
     const storedCart = getStoredCart();
     const saved = [];
     for (const id in storedCart) {
-      const addedproduct = products.find(product => product.id === id);
-      if (addedproduct) {
+      const addedProduct = products.find(product => product.id === id);
+      if (addedProduct) {
         const quantity = storedCart[id];
-        addedproduct.quantity = quantity;
-        saved.push(addedproduct);
+        addedProduct.quantity = quantity;
+        saved.push(addedProduct);
       }
     }
-    setcart(saved);
+    setCart(saved);
     // console.log(storedCart);
   }, [products]);
   const add = product => {
-    const add = [...cart, product];
     let newCart = [];
     const exists = cart.find(oldProduct => oldProduct.id === product.id);
     if (!exists) {
@@ -38,7 +36,7 @@ const Shop = () => {
       exists.quantity = exists.quantity + 1;
       newCart = [...rest, exists];
     }
-    setcart(newCart);
+    setCart(newCart);
     addToDb(product.id);
     // console.log(product);
   };
@@ -50,7 +48,11 @@ const Shop = () => {
         ))}
       </div>
       <div className="order-container">
-        <Cart cart={cart}></Cart>
+        <Cart cart={cart}>
+          <Link to="/Order" element={<Order></Order>}>
+            <button>Proceed to Checkout</button>
+          </Link>
+        </Cart>
       </div>
     </div>
   );
